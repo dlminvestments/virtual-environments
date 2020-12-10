@@ -43,7 +43,7 @@ class SimDevice
   
   # Executes a shell command and returns the result from stdout
   def execute_simctl_command(command)
-    return %x[xcrun simctl #{command}]
+    return `xcrun simctl #{command}`
   end
   
   # Retrieves the creation date/time of simulator with specified identifier
